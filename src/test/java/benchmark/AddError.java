@@ -35,4 +35,13 @@ public class AddError {
         );
         return context;
     }
+
+    public static void main(String[] args) throws RunnerException {
+        Options opt = new OptionsBuilder()
+            .include(AddError.class.getSimpleName())
+            .forks(1)
+            .build();
+
+        new Runner(opt).run();
+    }
 }
